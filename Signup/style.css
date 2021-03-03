@@ -9,12 +9,12 @@
 /* installing font */
 @font-face {
     font-family: 'Shabnam';
-    src: local('Shabnam'), url(./fonts/Shabnam.ttf) format('truetype');
+    src: local('Shabnam'), url(../fonts/Shabnam.ttf) format('truetype');
 }
 
 /* body styles, you can put image instead */
 body {
-    background: #064F7C;
+    background: #fff;
     font-family: 'Shabnam' ,'Lexend Mega', sans-serif;
 }
 
@@ -25,7 +25,7 @@ body {
 /* yellow background */
 .background {
     width: 500px;
-    height: 800px;
+    height: 700px;
     background: #F2DF2F;
     margin: 0 auto;
     z-index: 99;
@@ -34,7 +34,7 @@ body {
 /* main container */
 .signin-container {
     width: 500px;
-    height: 400px;
+    height: 100vh;
     background: transparent;
     margin: 0 auto;
     display: flex;
@@ -54,8 +54,8 @@ body {
 
 /* Login Text */
 .login-text h1 {
-    font-size: 150px;
-    padding: 20px;
+    font-size: 100px;
+    padding: 16px;
     z-index: 99;
 }
 
@@ -72,7 +72,7 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 100px;
+    height: 250px;
     margin-bottom: 18px;
     z-index: 99;
 }
@@ -85,6 +85,12 @@ hr {
     padding: 0 20px;
     transition: 0.3s;
     z-index: 99;
+    background: #fff494;
+}
+.input::placeholder {
+    color: black;
+    font-size: larger;
+    font-family: 'shabnam';
 }
 
 /* making hover for input */
@@ -98,7 +104,7 @@ hr {
     border-radius: 15px 15px 0 0;
     z-index: 99;
 }
-.input-two input {
+.input-five input {
     border-radius: 0 0 15px 15px;
     z-index: 99;
 }
@@ -116,7 +122,7 @@ hr {
 /* Declaring buttom container */
 .bottom-container {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: flex;
     flex-direction: column;
     z-index: 99;
@@ -125,8 +131,8 @@ hr {
 /* Declaring the blue background for Submit */
 .main-signin-container {
     width: 250px;
-    padding-bottom: 58%;
-    background: #4C4C4C;
+    height: 180px;
+    background: #fff494;
     border-radius: 20px 20px 0 0;
     display: flex;
     flex-direction: column;
@@ -136,16 +142,22 @@ hr {
 /* Sign in button !!! */
 .main-signin-container input {
     background: transparent;
-    color: #fff;
+    color: #000;
     border: none;
     font-size: 45px;
     padding-top: 15px;
     z-index: 99;
+    font-family: 'shabnam';
+    transition: 0.3s;
+}
+.main-signin-container input:hover {
+    font-size: 48px;
+    transition: 0.3s;
 }
 
 /* Declaring gradient at the end */
 .gradient {
-    background-image: url(./images/gradient.svg);
+    background-image: url(../images/gradient.svg);
     margin: 0 auto;
     width: 500px;
     height: 123px;
@@ -165,4 +177,31 @@ hr {
   background-size: cover;
   background-position: 50% 50%;
   z-index: -10;
+}
+
+/* Responsive */
+@media screen and (max-height: 700px) {
+    .main-signin-container {
+        height: 200px;
+    }
+    .background {
+        height: 720px;
+    }
+}
+/* bigger than 800px height */
+@media screen and (min-height: 750px) {
+    .main-signin-container {
+        height: 380px;
+    }
+    .background {
+        height: 900px;
+    }
+}
+@media screen and (min-width: 425px) {
+    .main-signin-container {
+        height: 200px;
+    }
+    .background {
+        height: 720px;
+    }
 }
